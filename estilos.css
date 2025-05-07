@@ -1,417 +1,242 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* estilos.css */
 
-*{
+* {
     margin: 0;
     padding: 0;
-    /* Padding es el espacio entre el borde y el contenido */
     box-sizing: border-box;
-    /* Box-sizing: border-box hace que el padding y el border se incluyan en el width y height del elemento */
-    text-decoration: none;
-    /* text-decoration: elimina el subrayado de los enlaces */
-    list-style: none;
-    /* List-style: elimina los puntos de las listas */
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: 'Poppins', sans-serif
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* Etiqueta container que se menciona en el HTML */
 .container {
+    width: 90%;
     max-width: 1200px;
-    margin: 0 auto; /* En cuanto se lleguen a los 1200 px de ancho, el margen se pone en auto y se centra */
+    margin: 0 auto;
 }
 
 .header {
-    background-image: linear-gradient( /* Que se oscurezca el fondo */
-        rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.7)),
-        url(images/images/bg.jpg);
-    background-position: center bottom;
-    background-repeat: no-repeat;
+    background-image: url('images/banner.jpg');
     background-size: cover;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
+    background-position: center;
+    padding: 100px 0;
+    color: white;
+    text-align: center;
 }
 
 .menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
 }
 
 .logo {
-    color: #fffdfc;
-    font-size: 25px;
-    font-weight: 800;
-}
-
-.menu .navbar ul li {
-    position: relative;
-    float: left;
-}
-
-.menu .navbar ul li a {
-    font-size: 18px;
-    padding: 20px;
-    color: #fffdfc;
-    display: block;
+    font-size: 24px;
     font-weight: 600;
+    text-decoration: none;
+    color: white;
 }
 
-/* El hover es el efecto que se produce cuando pasas el ratón por encima de los enlaces */
-.menu .navbar ul li a:hover {
-    color: #ce967b;
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.menu-icono {
+    width: 30px;
+    display: none;
 }
 
 #menu {
     display: none;
 }
 
-.menu-icono {
-    width: 25px;
-}
-
-.menu label {
-    cursor: pointer;
-    display: none;
-}
-
-.header-content {
-    text-align: center;
-}
-
 .header-content h1 {
-    font-size: 75px;
-    line-height: 80px;
-    color: #f9fafc;
-    text-transform: uppercase;
-    margin-bottom: 35px;
+    font-size: 48px;
+    margin-bottom: 10px;
 }
 
 .header-content p {
-    font-size: 16px;
-    color: #c5c5c5;
-    padding: 0 250px;
-    margin-bottom: 25px;
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
 .btn-1 {
-    display: inline-block; /* Para que el enlace (botón) no ocupe todo el ancho del contenedor */
-    padding: 11px 35px;
-    background-color: #ce967b;
-    color: #f9fafc;
-    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #f44336;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 .btn-1:hover {
-    background-color: #ebad8c;
+    background-color: #d32f2f;
 }
 
 .portafolio {
-    padding: 100px 0;
-    background-color: #e1e2e6;
-    position: relative;
-}
-
-.portafolio-content {
+    background-color: #fff;
+    padding: 60px 0;
     text-align: center;
 }
 
-.portafolio-content h2 {
-    font-size: 55px;
-    line-height: 70px;
-    color: #323337;
-    text-transform: uppercase;
-    padding: 0 250px;
-    margin-bottom: 12px;
-}
-
-.txt-p {
-    font-size: 16px;
-    color: #414247;
-    padding: 0 250px;
-    margin-bottom: 35px;
+.portafolio img:first-child {
+    width: 100px;
+    margin-bottom: 30px;
 }
 
 .portafolio-group {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
 .portafolio-1 {
-    padding: 0 25px;
-}
-
-.portafolio-1 img {
-    width: 200px;
-}
-
-.portafolio-img {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.portafolio-1 h3 {
-    color: #323337;
-    font-size: 20px;
-    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .services {
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.7)),
-        url(images/images/blog3.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-attachment: fixed;
-    padding: 100px 0;
-}
-
-.services-content {
+    background-color: #e3e3e3;
+    padding: 60px 0;
     text-align: center;
-}
-
-.services-content h2 {
-    font-size: 55px;
-    line-height: 70px;
-    color: #f9fafc;
-    text-transform: uppercase;
-    margin-bottom: 50px;
-}
-
-.services-content p {
-    font-size: 16px;
-    color: #c5c5c5;
-    margin-bottom: 50px;
-    padding: 0 100px;
 }
 
 .services-group {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-}
-
-.services-1 {
-    padding: 0 100px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
 }
 
 .services-1 img {
-    width: 25px;
-    margin-bottom: 15px;
-}
-
-.services-1 h3 {
-    color: #eaccb3;
-    font-size: 18px;
+    width: 80px;
+    margin-bottom: 10px;
 }
 
 .general {
     display: flex;
+    flex-wrap: wrap;
+    padding: 60px 0;
+    background-color: #fff;
+    text-align: left;
 }
 
 .general-1 {
-    width: 50%;
-    padding: 100px 250px 100px 100px; /*100px de arriba, 250px de derecha, 100px de abajo y 100px de izquierda*/
-    background-color: #e1e2e6;
+    flex: 1 1 50%;
+    padding: 30px;
 }
 
 .general-2 {
-    background-image: url(images/images/coffe-1.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
+    flex: 1 1 50%;
+    background-image: url('images/sobremi.jpg');
     background-size: cover;
-    width: 50%;
-}
-
-.general-3 {
-    background-image: url(images/images/coffee-2.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 50%;
-}
-
-h2 {
-    font-size: 55px;
-    line-height: 70px;
-    color: #323337;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 16px;
-    color: #414247;
-    margin: 25px 0 45px 0;
+    background-position: center;
+    min-height: 300px;
 }
 
 .blog {
-    padding: 100px 0;
+    background-color: #fafafa;
+    padding: 60px 0;
     text-align: center;
 }
 
 .blog-content {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
 .blog-1 {
-    padding: 15px 55px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .blog-1 img {
-    width: 250px;
-    border-radius: 15px; /* Bordes redondeados */
-    margin-bottom: 15px;
-}
-
-.blog-1 h3 {
-    font-size: 25px;
-    color: #323337;
+    width: 100%;
+    border-radius: 10px;
 }
 
 .footer {
-    padding: 100px 0;
-    background-color: #000000;
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
 
-link h3 {
-    font-size: 18px;
-    color: #f9fafc;
-    margin-bottom: 15px;
-}
-
-.link a {
-    font-size: 16px;
-    color: #c5c5c5;
-    display: block; /* Para que el enlace ocupe todo el ancho del contenedor */
+.footer .link h3 {
     margin-bottom: 10px;
+    font-size: 18px;
 }
 
-@media(max-width:991px) {
+.footer .link ul {
+    list-style: none;
+}
+
+.footer .link ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer .link ul li a:hover {
+    color: #f44336;
+}
+
+@media (max-width: 768px) {
     .menu {
-        padding: 30px;
-    }
-
-    .menu label {
-        display: initial;
-    }
-
-    .menu .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: #323337;
-        display: none; /* Oculta el menú por defecto */
-    }
-
-    .menu .navbar ul li {
-        width: 100%;
-    }
-
-    #menu:checked ~ .navbar {
-        display: initial; /* Cuando el checkbox está marcado, se muestra el menú */
-    }
-
-    .header {
-        min-height: 0vh;
-    }
-
-    .header-content {
-        padding: 100px 30px;
-    }
-
-    .header-content p {
-        padding: 0;
-    }
-
-    .portafolio {
-        padding: 30px;
-    }
-
-    .portafolio-content h2 {
-        padding: 0;
-    }
-
-    .txt-p {
-        padding: 0;
-    }
-
-    .portafolio-group {
         flex-direction: column;
-        margin-bottom: 0;
+        align-items: flex-start;
     }
 
-    .portafolio-img {
+    .navbar {
         display: none;
-    }
-
-    .services {
-        padding: 30px;
-    }
-
-    .services-content p {
-        padding: 0;
-    }
-
-    .services-group {
-        flex-direction: column;
-        margin-bottom: 0;
-    }
-
-    .services-1 {
-        margin-bottom: 25px;
-    }
-
-    .general {
-        flex-direction: column;
-    }
-
-    .general-1 {
         width: 100%;
-        padding: 30px;
-        text-align: center;
+        background-color: rgba(0, 0, 0, 0.8);
     }
 
-    .general-2, .general-3 {
-        display: none;
+    #menu:checked + label + .navbar {
+        display: block;
     }
 
-    .blog {
-        padding: 30px;
-    }
-
-    .blog-content {
+    .navbar ul {
         flex-direction: column;
+        gap: 10px;
+        padding: 20px;
     }
 
-    .blog-1 {
-        padding: 0;
+    .menu-icono {
+        display: block;
+        cursor: pointer;
     }
 
-    .footer {
-        padding: 30px;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
+    .header-content h1 {
+        font-size: 32px;
     }
 }
