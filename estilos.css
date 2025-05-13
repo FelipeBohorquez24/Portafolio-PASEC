@@ -81,6 +81,7 @@ header nav ul li a:hover {
     width: 100%;
     max-width: 800px;
     margin-bottom: 30px;
+    text-align: justify;
 }
 
 .contenido-texto h3 {
